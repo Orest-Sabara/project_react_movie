@@ -1,0 +1,20 @@
+img {
+    max-width: 240px;
+    max-height: 380px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px 3px dimgray;
+}
+.divContainer {
+    max-width: 280px;
+    margin: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #175e72;
+}
+
+.text {
+    font: italic small-caps bold 16px/2 cursive;
+}

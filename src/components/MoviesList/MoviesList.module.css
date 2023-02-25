@@ -1,0 +1,13 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.title {
+    font: small-caps bold 24px/1 sans-serif;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
