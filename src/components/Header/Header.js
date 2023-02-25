@@ -1,5 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import {UserInfo} from "../UserInfo/UserInfo";
 
 function Header() {
 
@@ -8,7 +9,7 @@ function Header() {
             <nav className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ul className="flex items-center justify-between h-16">
                     <li>
-                        <NavLink to={''} className="text-gray-300 hover:text-white">
+                        <NavLink to={'/'} className="text-gray-300 hover:text-white">
                             Main Page
                         </NavLink>
                     </li>
@@ -38,12 +39,7 @@ function Header() {
                         </button>
                     </li>
                     <li>
-                            <img
-                                src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
-                                alt="User Avatar"
-                                className="w-8 h-8 rounded-full mr-2"
-                            />
-
+                        <UserInfo/>
                     </li>
                 </ul>
             </nav>

@@ -24,12 +24,12 @@ export function PopularMovies() {
             <Swiper
                 spaceBetween={45}
                 slidesPerView={5}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => {}}
+                onSwiper={(swiper) => {}}
             >
                 {movies.map((movie) => (
-                    <SwiperSlide>
-                        <div className={css.divContainer} key={movie.id}>
+                    <SwiperSlide key={movie.id}>
+                        <div className={css.divContainer}>
                             {/*<h3 className={css.text}>{movie.title}</h3>*/}
                             <img
                                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

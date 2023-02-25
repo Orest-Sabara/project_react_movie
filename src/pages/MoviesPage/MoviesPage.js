@@ -2,6 +2,7 @@ import {useState} from "react";
 import Header from "../../components/Header/Header";
 import {PopularMovies} from "../../components/PopularMovie/PopularMovie";
 import {MoviesList} from "../../components";
+import '../../App.css'
 
 const MoviesPage = () => {
 
