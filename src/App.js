@@ -12,7 +12,7 @@ function App() {
             <Routes>
                 <Route path={RouterEndpoints.index} index element={<MoviesPage/>}/>
                 <Route path={RouterEndpoints.info} element={<InfoPage/>}/>
-                <Route path='*' element={<NotFoundPage/>}/>
+                               <Route path='*' element={<NotFoundPage/>}/>
             </Routes>
         </div>
     )
