@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { movieService } from "../../services";
 import { MoviesListCard } from "../MoviesListCard/MoviesListCard";
+import css from './SearchMovies.module.css'
 
 const SearchMovies = () => {
     const [searchKey, setSearchKey] = useState("");
@@ -42,7 +43,7 @@ const SearchMovies = () => {
                 </svg></button>
             </form>
 
-            <div>
+            <div className={css.wrapper}>
                 {movies.map((movie) => (
                     <MoviesListCard key={movie.id} movie={movie} />
                 ))}
