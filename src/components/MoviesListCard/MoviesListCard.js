@@ -27,7 +27,6 @@ const MoviesListCard = ({movie}) => {
     return (
         <div onClick={info} className={css.container}>
             <div className={css.text}>
-                <h3>{original_title}</h3>
                     <div>
 
                         <div className={css.container}>
@@ -43,6 +42,7 @@ const MoviesListCard = ({movie}) => {
                 <div>
                     <StarsRating movie={movie}/>
                 </div>
+                <h3 className='mb-8'>{original_title}</h3>
             </div>
         </div>
     );

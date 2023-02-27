@@ -42,17 +42,48 @@
 }
 
 .App {
-  background-color: #FFFFFF; /* Light mode background color */
-  color: #000000; /* Light mode text color */
+  background-color: beige;
+  color: #000000;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.loading img {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.imgLoading {
+  max-width: 50px;
+  border-radius: 6px;
+  box-shadow: none;
+  margin-left: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .dark-mode {
-  background-color: #222222; /* Dark mode background color */
-  color: #FFFFFF; /* Dark mode text color */
+  background-color: #222222;
+  color: #FFFFFF;
 }
 
 .switch {
-  background-color: transparent;
   border: none;
   cursor: pointer;
   display: flex;
@@ -78,3 +109,5 @@
   height: 24px;
   width: 24px;
 }
+
+

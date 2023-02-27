@@ -5,14 +5,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-input {
+select {
     background-color: olivedrab;
-    margin-right: 6px;
-}
-
-input::placeholder {
-    color: #FFFFFF;
-    opacity: 1;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0 6px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
 }
 
 .imgSearch {
@@ -20,4 +21,3 @@ input::placeholder {
     border-radius: 6px;
     box-shadow: none;
 }
-

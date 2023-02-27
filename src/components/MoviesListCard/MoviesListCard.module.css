@@ -1,6 +1,7 @@
 .text {
     font: italic small-caps bold 16px/2 cursive;
     float: left;
+    margin-right: 50px;
 }
 
 .badge {
@@ -16,3 +17,4 @@
     text-align: center;
     color: goldenrod;
 }
+

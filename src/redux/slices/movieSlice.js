@@ -4,16 +4,16 @@ import {movieService} from "../../services";
 const initialState = {
     movies: [],
     movieById: null,
+    page: null,
     errors: null,
     loading: null,
-
 };
 
 const getAllMovies = createAsyncThunk(
     'moviesSlice/getAllMovies',
-    async (_, {rejectWithValue}) => {
+    async ({page}, {rejectWithValue}) => {
         try {
-            const {data} = await movieService.getAll();
+            const {data} = await movieService.getAll(page);
             return data;
         } catch (e) {
             return rejectWithValue(e.response.data);
@@ -31,6 +31,7 @@ const getMovieById = createAsyncThunk(
         }
     });
 
+
 let moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
@@ -43,10 +44,14 @@ let moviesSlice = createSlice({
             .addCase(getMovieById.fulfilled, (state, action) => {
                 state.movieById = action.payload;
         })
+            .addDefaultCase((state, action) => {
+                const [actionStatus] = action.type.split('/').slice(-1);
+                state.loading = actionStatus === 'pending';
+            })
     }),
 });
 
-const {reducer: moviesReducer, actions: {}} = moviesSlice;
+const {reducer: moviesReducer} = moviesSlice;
 
 const moviesActions = {getAllMovies, getMovieById};
 

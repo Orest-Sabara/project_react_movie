@@ -1,5 +1,3 @@
-
-
 const MovieInfoData = ({movieById}) => {
 
     const {original_title,budget,overview,backdrop_path, original_language, release_date, vote_average, revenue, runtime, status} = movieById;

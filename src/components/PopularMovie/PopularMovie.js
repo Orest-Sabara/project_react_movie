@@ -2,6 +2,8 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
+
+import {API_KEY} from "../../services/apiService";
 import css from './PopularMovie.module.css'
 
 
@@ -9,8 +11,7 @@ export function PopularMovies() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        const apiKey = "11b7bc56670c7b26a4ddee66b5228ab7";
-        const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+        const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
         axios
             .get(apiUrl)
             .then((response) => setMovies(response.data.results))
