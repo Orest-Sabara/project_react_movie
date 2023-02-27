@@ -23,7 +23,7 @@ export function PopularMovies() {
         <div className={css.container}>
             <h2 className={css.text}>Новинки світового прокату</h2>
             <Swiper
-                spaceBetween={45}
+                spaceBetween={30}
                 slidesPerView={5}
                 onSlideChange={() => {}}
                 onSwiper={(swiper) => {}}
